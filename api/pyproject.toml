@@ -15,7 +15,14 @@ dependencies = [
 dev = ["pytest", "pytest-asyncio", "mypy", "ruff"]
 
 [tool.setuptools]
-packages = ["app", "app.routes"]
+packages = ["app", "app.routes", "app.domain"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.mypy]
 strict = true
+
+[[tool.mypy.overrides]]
+module = "asyncpg"
+ignore_missing_imports = true
