@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+asyncpg
+pydantic-settings
+redis
+httpx
+python-dotenv
+
+[dev]
+pytest
+pytest-asyncio
+mypy
+ruff
